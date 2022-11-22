@@ -64,6 +64,13 @@ const Details = ({player, setPlayerSelected}) => {
             <p>Wimbledon (Outdoor/Grass)</p>
             <p>Roland Garros (Outdoor/Clay)</p>
           </div>
+
+          <p>2022 - 3</p>
+          <div className="detail--stats-right-history">
+            <p>Wimbledon (Outdoor/Grass)</p>
+            <p>Roland Garros (Outdoor/Clay)</p>
+            <p>ATP Master 1000 PAris (Indoot/Hard)</p>
+          </div>
         </div>
       </div>
     </div>
@@ -79,6 +86,7 @@ const DetailsStyled = styled.section`
   transform: translate(-50%, -50%);
   width: 85vw;
   height: 85vh;
+  border-radius: 5px;
 
   @media (max-width: 768px) {
     margin: 0;
@@ -136,11 +144,13 @@ const DetailsStyled = styled.section`
     justify-content: space-between;
     margin-left: 20vw;
     margin-right: 30px;
+    margin-top: 15px;
 
     @media (max-width: 768px) {
       flex-direction: column-reverse;
       margin-left: 0;
       margin-right: 0;
+      margin-top: 0;
     }
   }
 
@@ -148,6 +158,7 @@ const DetailsStyled = styled.section`
     font-size: 70px;
     font-weight: bolder;
     line-height: 135%;
+    
 
     p {
       color: white;
@@ -169,12 +180,16 @@ const DetailsStyled = styled.section`
       font-size: 40px;
       display: flex;
       flex-direction: column-reverse;
-      border-top: 4px solid #F2753B;
-      border-bottom: 4px solid #F2753B;
+      background: url("https://images.prismic.io/fft-rg-commun-news/fd99796d-428f-465a-99d4-7bc66fc9ced0_20210601_RG_PB_4370_web.jpg?auto=compress,format") no-repeat center center;
+      padding-bottom: 10px;
 
+      p {
+        text-shadow: none;
+      }
+      
       span {
         font-size: 60px;
-        color: #F2753B;
+        color: white;
       }
 
       img {
@@ -275,6 +290,8 @@ const DetailsStyled = styled.section`
 
     @media (max-width: 768px) {
       width: 100%;
+      border-top: 1px solid lightgray;
+      padding-top: 6px;
     }
     
     > p {
@@ -297,6 +314,7 @@ const DetailsStyled = styled.section`
     }
     
     .detail--stats-right-history {
+      margin-bottom: 15px;
       p {
         font-size: 10px;
       }
